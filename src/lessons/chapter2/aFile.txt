@@ -1,0 +1,119 @@
+Module                  Size  Used by
+udp_diag               16384  0
+tcp_diag               16384  0
+inet_diag              24576  2 tcp_diag,udp_diag
+brcmfmac              499712  0
+brcmutil               24576  1 brcmfmac
+mmc_core              221184  1 brcmfmac
+amdgpu               9379840  0
+gpu_sched              49152  1 amdgpu
+hid_logitech_hidpp     69632  0
+joydev                 28672  0
+hid_apple              24576  0
+mousedev               24576  0
+hid_logitech_dj        36864  0
+btusb                  65536  0
+btrtl                  28672  1 btusb
+btbcm                  24576  1 btusb
+btintel                45056  1 btusb
+btmtk                  16384  1 btusb
+snd_usb_audio         389120  1
+bluetooth             876544  6 btrtl,btmtk,btintel,btbcm,btusb
+snd_usbmidi_lib        45056  1 snd_usb_audio
+snd_rawmidi            53248  1 snd_usbmidi_lib
+snd_seq_device         16384  1 snd_rawmidi
+mc                     69632  1 snd_usb_audio
+ecdh_generic           16384  1 bluetooth
+bcm5974                28672  0
+usbhid                 73728  1 hid_logitech_dj
+apple_mfi_fastcharge    20480  0
+uas                    32768  0
+usb_storage            81920  1 uas
+intel_rapl_msr         20480  0
+intel_rapl_common      32768  1 intel_rapl_msr
+x86_pkg_temp_thermal    20480  0
+intel_powerclamp       20480  0
+coretemp               20480  0
+snd_hda_codec_cirrus    24576  1
+snd_hda_codec_generic    98304  1 snd_hda_codec_cirrus
+ledtrig_audio          16384  1 snd_hda_codec_generic
+kvm_intel             385024  0
+snd_hda_codec_hdmi     86016  1
+snd_hda_intel          61440  3
+snd_intel_dspcfg       36864  1 snd_hda_intel
+kvm                  1130496  1 kvm_intel
+snd_intel_sdw_acpi     20480  1 snd_intel_dspcfg
+irqbypass              16384  1 kvm
+crct10dif_pclmul       16384  1
+snd_hda_codec         188416  4 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_cirrus
+crc32_pclmul           16384  0
+spi_nor               118784  0
+btrfs                1904640  0
+ghash_clmulni_intel    16384  0
+wl                   6512640  0
+snd_hda_core          118784  5 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_codec_cirrus
+mtd                    90112  3 spi_nor
+radeon               1867776  83
+aesni_intel           380928  0
+mei_hdcp               24576  0
+mei_pxp                20480  0
+crypto_simd            16384  1 aesni_intel
+spi_intel_platform     16384  0
+snd_hwdep              16384  2 snd_usb_audio,snd_hda_codec
+iTCO_wdt               16384  0
+cryptd                 28672  2 crypto_simd,ghash_clmulni_intel
+blake2b_generic        20480  0
+spi_intel              28672  1 spi_intel_platform
+rapl                   16384  0
+intel_pmc_bxt          16384  1 iTCO_wdt
+applesmc               28672  0
+snd_pcm               172032  5 snd_hda_codec_hdmi,snd_hda_intel,snd_usb_audio,snd_hda_codec,snd_hda_core
+mei_me                 53248  2
+acpi_als               20480  1
+drm_ttm_helper         16384  2 amdgpu,radeon
+xor                    24576  1 btrfs
+intel_cstate           20480  0
+iTCO_vendor_support    16384  1 iTCO_wdt
+cfg80211             1089536  2 wl,brcmfmac
+i2c_i801               45056  0
+raid6_pq              122880  1 btrfs
+industrialio_triggered_buffer    16384  1 acpi_als
+intel_uncore          217088  0
+ttm                    94208  3 amdgpu,radeon,drm_ttm_helper
+sbs                    20480  0
+libcrc32c              16384  1 btrfs
+kfifo_buf              16384  1 industrialio_triggered_buffer
+snd_timer              49152  1 snd_pcm
+apple_gmux             28672  0
+thunderbolt           389120  0
+rfkill                 32768  7 bluetooth,cfg80211
+mei                   172032  5 mei_hdcp,mei_pxp,mei_me
+intel_pch_thermal      20480  0
+i2c_smbus              20480  1 i2c_i801
+sbshc                  16384  1 sbs
+industrialio          106496  3 industrialio_triggered_buffer,acpi_als,kfifo_buf
+drm_display_helper    180224  2 amdgpu,radeon
+lpc_ich                28672  0
+snd                   126976  19 snd_hda_codec_generic,snd_seq_device,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_usb_audio,snd_usbmidi_lib,snd_hda_codec,snd_timer,snd_pcm,snd_rawmidi
+video                  61440  1 apple_gmux
+cec                    81920  1 drm_display_helper
+apple_bl               20480  1 apple_gmux
+soundcore              16384  1 snd
+mac_hid                16384  0
+pkcs8_key_parser       16384  0
+dm_multipath           45056  0
+dm_mod                184320  1 dm_multipath
+sg                     49152  0
+crypto_user            24576  0
+fuse                  176128  5
+bpf_preload            24576  0
+ip_tables              36864  0
+x_tables               57344  1 ip_tables
+ext4                 1015808  1
+crc32c_generic         16384  0
+crc16                  16384  2 bluetooth,ext4
+mbcache                16384  1 ext4
+jbd2                  188416  1 ext4
+xhci_pci               20480  0
+crc32c_intel           24576  3
+xhci_pci_renesas       24576  1 xhci_pci
